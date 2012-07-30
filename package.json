@@ -1,7 +1,7 @@
 {
   "name": "pentawalltools",
   "main": "pentawalltools",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "some tools for the c3d2 pentawalls",
   "engines": {
     "node": ">=0.6.0"
@@ -14,6 +14,6 @@
     "install": "node-gyp rebuild"
   },
   "gypfile": true,
-  "_id": "pentawalltools@0.0.3",
+  "_id": "pentawalltools@0.0.4",
   "_from": "pentawalltools"
 }
