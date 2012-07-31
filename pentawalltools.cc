@@ -122,13 +122,15 @@ inline Handle<Value> decodeG3d2EncodingWithAlpha(const uint8_t* const data, cons
 		
 		int old = *bg++;
 
+
 		int old_a = old & 0x0f;
 		int old_b = old >> 4;
+		
+		int result_a  = ((old_a * (15-aa) + a*aa) >> 4) & 0xf;
+		int result_b  = ((old_b * (15-ba) + b*ba) >> 4) & 0xf;
 
-		a = (old_a & ~aa) | a;
-		b = (old_b & ~ba) | b;
 
-		*dst++ = a | (b << 4);
+		*dst++ = result_a | (result_b << 4);
 	}
 
 	return buffer;
